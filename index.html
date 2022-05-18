@@ -6,124 +6,161 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blanchard - художественная галерея</title>
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/js/swiper.js"></script>
+    
 </head>
 <body>
+    <div class="top-wrapper">
+        <header class="header">
+            <div class="header-container__top">
+                <div class="container header-container__top-menu">
+                    <a class="header-container__logo" aria-label="Логотип">
+                        <img class="header-container__logo-img" src="img/logo.svg" alt>        
+                    </a>
 
-    <header class="header">
-        <div class="header-container__main">
-            <div class="container header-container__main-menu">
-                <a class="header-container__logo" aria-label="Логотип">
-                    <img class="header-container__logo-img" src="img/logo.svg" alt>        
-                </a>
+                    <nav class="header-container__nav">
+                        <ul class="header-container__nav-list">
+                            <li class="header-container__nav-item">
+                                <a class="header-container__nav-link" href aria-label="О нас">О нас</a>
+                            </li>
+                            <li class="header-container__nav-item">
+                                <a class="header-container__nav-link" href aria-label="Галерея">Галерея</a>
+                            </li>
+                            <li class="header-container__nav-item">
+                                <a class="header-container__nav-link" href aria-label="Каталог">Каталог</a>
+                            </li>
+                            <li class="header-container__nav-item">
+                                <a class="header-container__nav-link" href aria-label="События">События</a>
+                            </li>
+                            <li class="header-container__nav-item">
+                                <a class="header-container__nav-link" href aria-label="Проекты">Проекты</a>
+                            </li>
+                            <li class="header-container__nav-item">
+                                <a class="header-container__nav-link" href aria-label="Контакты">Контакты</a>
+                            </li>
+                        </ul>
 
-                <nav class="header-container__nav">
-                    <ul class="header-container__nav-list">
-                        <li class="header-container__nav-item">
-                            <a class="header-container__nav-link" href aria-label="О нас">О нас</a>
-                        </li>
-                        <li class="header-container__nav-item">
-                            <a class="header-container__nav-link" href aria-label="Галерея">Галерея</a>
-                        </li>
-                        <li class="header-container__nav-item">
-                            <a class="header-container__nav-link" href aria-label="Каталог">Каталог</a>
-                        </li>
-                        <li class="header-container__nav-item">
-                            <a class="header-container__nav-link" href aria-label="События">События</a>
-                        </li>
-                        <li class="header-container__nav-item">
-                            <a class="header-container__nav-link" href aria-label="Проекты">Проекты</a>
-                        </li>
-                        <li class="header-container__nav-item">
-                            <a class="header-container__nav-link" href aria-label="Контакты">Контакты</a>
-                        </li>
-                    </ul>
-
-                    <button class="btn header-container__btn-search" id="btnSearch" aria-label="Поиск">
-                        <span class="header-container__btn-icon">
-                            <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"></rect>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"></path>
-                            </svg>
-                        </span>
-                    </button>
-
-                    <button class="btn header-container__burger" id="burger" aria-label="Меню">
-                        <span class="header-container__burger-line"></span>
-                    </button>
-
-                    <button class="btn header-container__btn-pc" id="btnPC" aria-label="Войти">
-                        <span class="header-container__pc-icon" type="submit" value>
-                            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"></path>
-                            </svg>
-                        </span>
-                        <span class="header-container__pc">Войти</span>
-                    </button>
-                </nav>
-            </div>
-        </div>
-
-        <div class="header-container__second">
-            <div class="container header-container__second-menu">
-                <ul class="header-container__second-list">
-                     <li class="header-container__second-item">
-                         <button class="btn header-container__item-btn" data-path="one">
-                             <strong class="header-container__item-heading">Реализм</strong>
-                             <span class="header-container__item-icon"></span>
-                         </button>
-                     </li>
-                     <li class="header-container__second-item">
-                        <button class="btn header-container__item-btn" data-path="one">
-                            <strong class="header-container__item-heading">Импрессионизм</strong>
-                            <span class="header-container__item-icon"></span>
+                        <button class="btn header-container__btn-search" id="btnSearch" aria-label="Поиск">
+                            <span class="header-container__btn-icon">
+                                <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"></rect>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"></path>
+                                </svg>
+                            </span>
                         </button>
-                    </li>
-                    <li class="header-container__second-item">
-                        <button class="btn header-container__item-btn" data-path="one">
-                            <strong class="header-container__item-heading">Постимпрессионизм</strong>
-                            <span class="header-container__item-icon"></span>
+
+                        <button class="btn header-container__burger" id="burger" aria-label="Меню">
+                            <span class="header-container__burger-line"></span>
                         </button>
-                    </li>
-                    <li class="header-container__second-item">
-                        <button class="btn header-container__item-btn" data-path="one">
-                            <strong class="header-container__item-heading">Авангард</strong>
-                            <span class="header-container__item-icon"></span>
+
+                        <button class="btn header-container__btn-pc" id="btnPC" aria-label="Войти">
+                            <span class="header-container__pc-icon" type="submit" value>
+                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"></path>
+                                </svg>
+                            </span>
+                            <span class="header-container__pc">Войти</span>
                         </button>
-                    </li>   
-                    <li class="header-container__second-item">
-                        <button class="btn header-container__item-btn" data-path="one">
-                            <strong class="header-container__item-heading">Футуризм</strong>
-                            <span class="header-container__item-icon"></span>
-                        </button>
-                    </li>
-                </ul>
-                <div class="header-container__form">
-                    <form>
-                        <button class="btn header-container__btn-find" aria-label="Найти" type="submit">
-                            <span class="header-container__btn-icon"></span>
-                        </button>
-                        <input class="header-container__form-search" aria-label="Введите текст для поиска" type="search" placeholder="Поиск по сайту">
-                    </form>
+                    </nav>
                 </div>
             </div>
-        </div>
-    </header>
 
-    <main>
+            <div class="header-container__bottom">
+                <div class="container header-container__bottom-menu">
+                    <ul class="header-container__bottom-list">
+                        <li class="header-container__bottom-item">
+                            <button class="btn header-container__item-btn" data-path="one">
+                                <strong class="header-container__item-heading">Реализм</strong>
+                                <span class="header-container__item-icon"></span>
+                            </button>
+                            <div class="main__dropdown js-header-drop" data-target="one">
+                                <div class="main__dropdown-wrap" data-simplebar>
+                                  <ul class="main__drop-list reset-list">
+                                    <li class="main__dropdown-item"><a href="" class="main__item-link main__item-link--tintoretto"><span class="main__item-text">Тинторрето</span></a></li>
+                                    <li class="main__dropdown-item"><a href="" class="main__item-link main__item-link--fridrih">Фридрих</a></li>
+                                    <li class="main__dropdown-item"><a href="" class="main__item-link main__item-link--leonardo">Леонардо</a></li>
+                                    <li class="main__dropdown-item"><a href="" class="main__item-link main__item-link--verrokio">Веррокьо</a></li>
+                                    <li class="main__dropdown-item"><a href="" class="main__item-link main__item-link--tintoretto">Тинторрето</a></li>
+                                    <li class="main__dropdown-item"><a href="" class="main__item-link main__item-link--leonardo">Леонардо</a></li>
+                                  </ul>
+                                </div>
+                              </div>
+                        </li>
+                        <li class="header-container__bottom-item">
+                            <button class="btn header-container__item-btn" data-path="one">
+                                <strong class="header-container__item-heading">Импрессионизм</strong>
+                                <span class="header-container__item-icon"></span>
+                            </button>
+                        </li>
+                        <li class="header-container__bottom-item">
+                            <button class="btn header-container__item-btn" data-path="one">
+                                <strong class="header-container__item-heading">Постимпрессионизм</strong>
+                                <span class="header-container__item-icon"></span>
+                            </button>
+                        </li>
+                        <li class="header-container__bottom-item">
+                            <button class="btn header-container__item-btn" data-path="one">
+                                <strong class="header-container__item-heading">Авангард</strong>
+                                <span class="header-container__item-icon"></span>
+                            </button>
+                        </li>   
+                        <li class="header-container__bottom-item">
+                            <button class="btn header-container__item-btn" data-path="one">
+                                <strong class="header-container__item-heading">Футуризм</strong>
+                                <span class="header-container__item-icon"></span>
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="header-container__form">
+                        <form>
+                            <button class="btn header-container__btn-find" aria-label="Найти" type="submit">
+                                <span class="header-container__btn-icon"></span>
+                            </button>
+                            <input class="header-container__form-search" aria-label="Введите текст для поиска" type="search" placeholder="Поиск по сайту">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </header>
+
         <section class="section-hero">
             <div class="container section-hero__container">
                 <div class="section-hero__offer">
-                    <div class="section-hero__heading">Прикоснитесь к прекрасному</div>
-                    <div class="section-hero__desc">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</div>
-                     <button class="btn section-hero__btn" aria-label="Подписаться на рассылку"> 
-                        <a class="section-hero__btn-link" type="submit" tabindex="-1">
-                            Подписться на рассылку
-                        </a>
-                    </button>   
+                    <h2 class="section-hero__heading">Прикоснитесь к&nbsp;прекрасному</h2>
+                    <p class="section-hero__desc">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
+                    <a class="section-hero__link" href="#">
+                        Подписться на рассылку
+                    </a>  
                 </div>
             </div>
+        </section>
+        
+        <div class="slider-wrapper">
+            <div class="js-hero-swiper swiper-container slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide slide-1"></div>
+                <div class="swiper-slide slide slide-2"></div>
+                <div class="swiper-slide slide slide-3"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        </div>
+    </div>
+
+    <main>   
+        <section class="section-about">
+            <div class="container section-about__container">
+                <h3 class="main-heading section-about__heading">
+                    О нас
+                </h3 >
+                <p class="section-about__desc">
+                    Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны быть разоблачены.
+                </p>
         </section>
     </main>
 </body>
