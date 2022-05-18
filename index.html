@@ -15,32 +15,32 @@
         <div class="header-container__main">
             <div class="container header-container__main-menu">
                 <a class="header-container__logo" aria-label="Логотип">
-                    <img class="header-container__logo-img" src="img/logo.svg" alt="">        
+                    <img class="header-container__logo-img" src="img/logo.svg" alt>        
                 </a>
 
                 <nav class="header-container__nav">
                     <ul class="header-container__nav-list">
                         <li class="header-container__nav-item">
-                            <a class="header-container__nav-link" href="" aria-label="О нас">О нас</a>
+                            <a class="header-container__nav-link" href aria-label="О нас">О нас</a>
                         </li>
                         <li class="header-container__nav-item">
-                            <a class="header-container__nav-link" href="" aria-label="Галерея">Галерея</a>
+                            <a class="header-container__nav-link" href aria-label="Галерея">Галерея</a>
                         </li>
                         <li class="header-container__nav-item">
-                            <a class="header-container__nav-link" href="" aria-label="Каталог">Каталог</a>
+                            <a class="header-container__nav-link" href aria-label="Каталог">Каталог</a>
                         </li>
                         <li class="header-container__nav-item">
-                            <a class="header-container__nav-link" href="" aria-label="События">События</a>
+                            <a class="header-container__nav-link" href aria-label="События">События</a>
                         </li>
                         <li class="header-container__nav-item">
-                            <a class="header-container__nav-link" href="" aria-label="Проекты">Проекты</a>
+                            <a class="header-container__nav-link" href aria-label="Проекты">Проекты</a>
                         </li>
                         <li class="header-container__nav-item">
-                            <a class="header-container__nav-link" href="" aria-label="Контакты">Контакты</a>
+                            <a class="header-container__nav-link" href aria-label="Контакты">Контакты</a>
                         </li>
                     </ul>
 
-                    <button class="header-container__btn-search" id="btnSearch" aria-label="Поиск">
+                    <button class="btn header-container__btn-search" id="btnSearch" aria-label="Поиск">
                         <span class="header-container__btn-icon">
                             <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"></rect>
@@ -49,11 +49,11 @@
                         </span>
                     </button>
 
-                    <button class="header-container__burger" id="burger" aria-label="Меню">
+                    <button class="btn header-container__burger" id="burger" aria-label="Меню">
                         <span class="header-container__burger-line"></span>
                     </button>
 
-                    <button class="header-container__btn-pc" id="btnPC" aria-label="Войти">
+                    <button class="btn header-container__btn-pc" id="btnPC" aria-label="Войти">
                         <span class="header-container__pc-icon" type="submit" value>
                             <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"></path>
@@ -69,37 +69,44 @@
             <div class="container header-container__second-menu">
                 <ul class="header-container__second-list">
                      <li class="header-container__second-item">
-                         <button class="header-container__item-btn" data-path="one">
+                         <button class="btn header-container__item-btn" data-path="one">
                              <strong class="header-container__item-heading">Реализм</strong>
                              <span class="header-container__item-icon"></span>
                          </button>
                      </li>
                      <li class="header-container__second-item">
-                        <button class="header-container__item-btn" data-path="one">
+                        <button class="btn header-container__item-btn" data-path="one">
                             <strong class="header-container__item-heading">Импрессионизм</strong>
                             <span class="header-container__item-icon"></span>
                         </button>
                     </li>
                     <li class="header-container__second-item">
-                        <button class="header-container__item-btn" data-path="one">
+                        <button class="btn header-container__item-btn" data-path="one">
                             <strong class="header-container__item-heading">Постимпрессионизм</strong>
                             <span class="header-container__item-icon"></span>
                         </button>
                     </li>
                     <li class="header-container__second-item">
-                        <button class="header-container__item-btn" data-path="one">
+                        <button class="btn header-container__item-btn" data-path="one">
                             <strong class="header-container__item-heading">Авангард</strong>
                             <span class="header-container__item-icon"></span>
                         </button>
                     </li>   
                     <li class="header-container__second-item">
-                        <button class="header-container__item-btn" data-path="one">
+                        <button class="btn header-container__item-btn" data-path="one">
                             <strong class="header-container__item-heading">Футуризм</strong>
                             <span class="header-container__item-icon"></span>
                         </button>
                     </li>
                 </ul>
-                <div class="header-container__form-search"></div>
+                <div class="header-container__form">
+                    <form>
+                        <button class="btn header-container__btn-find" aria-label="Найти" type="submit">
+                            <span class="header-container__btn-icon"></span>
+                        </button>
+                        <input class="header-container__form-search" aria-label="Введите текст для поиска" type="search" placeholder="Поиск по сайту">
+                    </form>
+                </div>
             </div>
         </div>
     </header>
