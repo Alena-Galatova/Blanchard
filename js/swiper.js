@@ -1,10 +1,9 @@
-
-const swiper = new swiper('.js-hero-swiper', {
+const swiper = new Swiper('.js-hero-swiper', {
     allowTouchMove: false,
     loop: true,
     effect: 'fade',
     speed: 10000,
     autoplay: {
-      delay: 10000
+      delay: 2000
     }
   });
