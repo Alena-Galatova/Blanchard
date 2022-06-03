@@ -8,6 +8,7 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
+    <link rel="stylesheet" href="css/choices.min.css">
     <link href="css/style.css" rel="stylesheet">    
 </head>
 <body>
@@ -181,7 +182,7 @@
                     <h2 class="section-hero__heading">Прикоснитесь к&nbsp;прекрасному</h2>
                     <p class="section-hero__desc">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
                     <a class="section-hero__link" href="#">
-                        Подписться на рассылку
+                        Подписаться на рассылку
                     </a>  
                 </div>
             </div>
@@ -209,14 +210,131 @@
                     Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны быть разоблачены.
                 </p>
         </section>
+
+        <section class="section-gallery">
+            <div class="container section-gallery__container">
+                <div class="section-gallery__left">
+                    <h3 class="main-heading section-gallery__heading">
+                        Галерея
+                    </h3 >
+                    <div class="section-gallery__left-content">
+                        <div class="section-gallery__select">
+                            <span class="section-gallery__select-heading">Фильтр:</span>
+                            <select class="select" name="select">
+                                <option selected value="1">Живопись</option>
+                                <option value="2">Рисунок</option>
+                                <option value="3">Скульптура</option>
+                            </select>
+            
+                            <script src="/js/choices.min.js"></script>
+            
+                            <script>
+                                const element = document.querySelector('select');
+                                const choices = new Choices(element, {
+                                    searchEnabled: false,
+                                    itemSelectText: ""
+                                });
+                            </script>
+                        </div>
+                        
+                        <form class="section-gallery__form">
+                            <label class="section-gallery__custom-checkbox">
+                                <input class="visually-hidden section-gallery__checkbox" type="checkbox" name="check" id="check-xix">
+                                <span class="section-gallery__visible"></span>
+                                <span class="section-gallery__check-text" tabindex="0">XIX век</span>
+                            </label>
+                            <label class="section-gallery__custom-checkbox">
+                                <input class="visually-hidden section-gallery__checkbox" type="checkbox" name="check" id="check-xx">
+                                <span class="section-gallery__visible"></span>
+                                <span class="section-gallery__check-text" tabindex="0">XX век</span>
+                            </label>
+                            <label class="section-gallery__custom-checkbox">
+                                <input class="visually-hidden section-gallery__checkbox" type="checkbox" name="check" id="check-modern">
+                                <span class="section-gallery__visible"></span>
+                                <span class="section-gallery__check-text" tabindex="0">Современность</span>
+                            </label>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="section-gallery__right">
+                    <div class="test-swiper">
+                        <div class="test-navigation">
+                          <button class="nav-btn test-prev" aria-label="К предыдущему слайду"></button>
+                          <div class="test-pagination"></div>
+                          <button class="nav-btn test-next" aria-label="К следующему слайду"></button>
+                        </div>
+                        <div class="swiper-container slides-container">
+                        <div class="swiper-wrapper">
+                          <a class="swiper-slide test-slide" href="#">
+                            <picture>
+                              <source srcset="" media="(max-width: 580px)">
+                              <source srcset="" media="(max-width: 960px)">
+                              <source srcset="" media="(max-width: 1360px)">
+                              
+                              <!-- Здесь картинка от 1361 до 1920 и выше -->
+                              <img class="test-image" src="img/gallery/slide1.jpg" alt="">
+                            </picture>
+                          </a>
+                          <a class="swiper-slide test-slide" href="#">
+                            <picture>
+                              <source srcset="" media="(min-width: 1024px)">
+                              <img class="test-image" src="img/gallery/slide2.jpg" alt="">
+                            </picture>
+                          </a>
+                          <a class="swiper-slide test-slide" href="#">
+                            <picture>
+                              <source srcset="" media="(min-width: 1024px)">
+                              <img class="test-image" src="img/gallery/slide3.jpg" alt="">
+                            </picture>
+                          </a>
+                          <a class="swiper-slide test-slide" href="#">
+                            <picture>
+                              <source srcset="" media="(min-width: 1024px)">
+                              <img class="test-image" src="img/gallery/slide4.jpg" alt="">
+                            </picture>
+                          </a>
+                          <a class="swiper-slide test-slide" href="#">
+                            <picture>
+                              <source srcset="" media="(min-width: 1024px)">
+                              <img class="test-image" src="img/gallery/slide5.jpg" alt="">
+                            </picture>
+                          </a>
+                          <a class="swiper-slide test-slide" href="#">
+                            <picture>
+                              <source srcset="" media="(min-width: 1024px)">
+                              <img class="test-image" src="img/gallery/slide6.jpg" alt="">
+                            </picture>
+                          </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-catalog">
+            <div class="container section-catalog__container">
+                <h3 class="main-heading">Каталог</h3>
+                <p class="section-catalog__desc">Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы. </p>
+                <div class="section-catalog__content">
+                    <div class="section-catalog__left-content">
+                    </div>
+                    <div class="section-catalog__right-content"></div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    
+    <!-- Главный слайдер -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="/js/swiper.js"></script>
 
+    <!-- Выпадающий список -->
     <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
     <script src="/js/simlebar.js"></script>
+
+    <!-- Слайдер в галлерее -->
+    <script src="js/gallery slider.js"></script>
 
 
 </body>

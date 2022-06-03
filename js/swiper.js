@@ -4,6 +4,6 @@ const swiper = new Swiper('.js-hero-swiper', {
     effect: 'fade',
     speed: 10000,
     autoplay: {
-      delay: 2000
+      delay: 10000
     }
   });
