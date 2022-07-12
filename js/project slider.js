@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    let gallerySlider = new Swiper(".slides-container", {
+    let eventsSlider = new Swiper(".swiper-project", {
       slidesPerView: 1,
       grid: {
         rows: 1,
@@ -7,12 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       spaceBetween: 20,
       pagination: {
-        el: ".test-swiper .test-pagination",
+        el: ".test-section .test-pagination",
         type: "fraction"
       },
       navigation: {
-        nextEl: ".test-next",
-        prevEl: ".test-prev"
+        nextEl: ".project-btn-next",
+        prevEl: ".project-btn-prev"
       },
   
       breakpoints: {
@@ -49,24 +49,23 @@ document.addEventListener("DOMContentLoaded", () => {
           });
         },
         slideChange: function () {
-          this.slides.forEach((slide) => {
-            if (!slide.classList.contains("slide-visible")) {
-              slide.tabIndex = "-1";
-            } else {
-              slide.tabIndex = "";
-            }
-          });
+            this.slides.forEach((slide) => {
+              if (!slide.classList.contains("slide-visible")) {
+                slide.tabIndex = "-1";
+              } else {
+                slide.tabIndex = "";
+              }
+            });
+          }
         }
-      }
-  
-      // on: {
-      //   /* исправляет баг с margin-top остающимся при смене брейкпоинта, это было нужно в 6-й версии свайпера */
-      //   beforeResize: function () {
-      //     this.slides.forEach((el) => {
-      //       el.style.marginTop = "";
-      //     });
-      //   }
-      // }
+    
+        // on: {
+        //   /* исправляет баг с margin-top остающимся при смене брейкпоинта, это было нужно в 6-й версии свайпера */
+        //   beforeResize: function () {
+        //     this.slides.forEach((el) => {
+        //       el.style.marginTop = "";
+        //     });
+        //   }
+        // }
+      });
     });
-  });
-  
