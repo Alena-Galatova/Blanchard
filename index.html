@@ -10,11 +10,18 @@
     <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
     <link rel="stylesheet" href="libs/choices.min.css">
     <link rel="stylesheet" href="libs/accordion.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <link href="css/style.css" rel="stylesheet">  
     
     <!-- Главный слайдер -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
     <script src="js/swiper.js" defer></script>
+
+    <!-- Бургер -->
+    <script src="js/burger.js" defer></script>
+
+    <!-- Форма для поиска -->
+    <script src="/js/search.js" defer></script>
 
     <!-- Выпадающий список -->
     <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js" defer></script>
@@ -23,6 +30,7 @@
     <!-- Слайдер в разделе Галлерея -->
     <script src="js/gallery slider.js" defer></script>
     <script src="js/scroll.js" defer></script>
+    <script src="js/modal.js"></script>
 
     <!-- Селект -->
     <script src="libs/choices.min.js" defer></script>
@@ -54,6 +62,11 @@
     <!-- Яндекс карта -->
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript" defer></script>
     <script src="/js/map.js" defer></script>
+
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  
 </head>
 <body>
     <div class="top-wrapper">
@@ -64,42 +77,29 @@
                         <img class="header-container__logo-img" src="img/logo.svg" alt>        
                     </a>
 
-                    <nav class="header-container__nav">
+                    <nav class="header-container__nav" id="navMenu">
                         <ul class="header-container__nav-list">
                             <li class="header-container__nav-item">
-                                <a class="header-container__nav-link" href aria-label="О нас"><span>О нас</span></a>
+                                <a class="header-container__nav-link" href="#about" aria-label="О нас"><span>О нас</span></a>
                             </li>
                             <li class="header-container__nav-item">
-                                <a class="header-container__nav-link" href aria-label="Галерея"><span>Галерея</span></a>
+                                <a class="header-container__nav-link header-container__nav-link2" href="#gallery" aria-label="Галерея"><span>Галерея</span></a>
                             </li>
                             <li class="header-container__nav-item">
-                                <a class="header-container__nav-link" href aria-label="Каталог"><span>Каталог</span></a>
+                                <a class="header-container__nav-link" href="#catalog" aria-label="Каталог"><span>Каталог</span></a>
                             </li>
                             <li class="header-container__nav-item">
-                                <a class="header-container__nav-link" href aria-label="События"><span>События</span></a>
+                                <a class="header-container__nav-link" href="#events" aria-label="События"><span>События</span></a>
                             </li>
                             <li class="header-container__nav-item">
-                                <a class="header-container__nav-link" href aria-label="Проекты"><span>Проекты</span></a>
+                                <a class="header-container__nav-link" href="#projects" aria-label="Проекты"><span>Проекты</span></a>
                             </li>
                             <li class="header-container__nav-item">
-                                <a class="header-container__nav-link" href aria-label="Контакты"><span>Контакты</span></a>
+                                <a class="header-container__nav-link" href="#contacts" aria-label="Контакты"><span>Контакты</span></a>
                             </li>
                         </ul>
 
-                        <button class="btn header-container__btn-search" id="btnSearch" aria-label="Поиск">
-                            <span class="header-container__btn-icon">
-                                <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"></rect>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"></path>
-                                </svg>
-                            </span>
-                        </button>
-
-                        <button class="btn header-container__burger" id="burger" aria-label="Меню">
-                            <span class="header-container__burger-line"></span>
-                        </button>
-
-                        <button class="btn header-container__btn-pc" id="btnPC" aria-label="Войти">
+                        <button class="btn header-container__btn-pc" id="btnPC" aria-label="Войти" tabindex="0">
                             <span class="header-container__pc-icon" type="submit" value>
                                 <svg width="13" height="13" viewBox="0 0 13 13"  xmlns="http://www.w3.org/2000/svg">
                                     <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"></path>
@@ -108,10 +108,23 @@
                             <span class="header-container__pc">Войти</span>
                         </button>
                     </nav>
+
+                    <button class="btn header-container__btn-search" id="btnSearch" aria-label="Поиск">
+                      <span class="header-container__btn-icon">
+                          <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"></rect>
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"></path>
+                          </svg>
+                      </span>
+                    </button>
+
+                  <button class="btn header-container__burger" id="burger" aria-label="Меню" tabindex="0">
+                      <span class="header-container__burger-line"></span>
+                  </button>
                 </div>
             </div>
 
-            <div class="header-container__bottom">
+            <div class="header-container__bottom" id="formSearch">
                 <div class="container header-container__bottom-menu">
                     <ul class="header-container__bottom-list">
                         <li class="header-container__bottom-item">
@@ -203,7 +216,7 @@
                     </ul>
 
                     
-                    <div class="header-container__form">
+                    <div class="header-container__form" >
                         <form>
                             <button class="btn header-container__btn-find" aria-label="Найти" type="submit">
                                 <span class="header-container__btn-icon">
@@ -245,7 +258,7 @@
     </div>
 
     <main>   
-        <section class="section-about">
+        <section class="section-about" id="about">
             <div class="container section-about__container">
                 <h3 class="main-heading">
                     О нас
@@ -292,61 +305,95 @@
                 </div>
 
                 <div class="section-gallery__right">
-                    <div class="test-swiper">
-                        <div class="test-navigation">
-                          <button class="nav-btn test-prev" aria-label="К предыдущему слайду"></button>
-                          <div class="test-pagination"></div>
-                          <button class="nav-btn test-next" aria-label="К следующему слайду"></button>
+                    <div class="swiper-gallery">
+                        <div class="gallery-navigation">
+                          <button class="nav-btn gallery-prev" aria-label="К предыдущему слайду"></button>
+                          <div class="gallery-pagination"></div>
+                          <button class="nav-btn gallery-next" aria-label="К следующему слайду"></button>
                         </div>
-                        <div class="swiper-container slides-container">
-                        <div class="swiper-wrapper">
-                          <a class="swiper-slide test-slide" href="#">
+                        <div class="swiper-container slides-container" >
+                        <div class="swiper-wrapper swiper-wrapper__gallery">
+                          <a class="swiper-slide slide-gallery" href="#ex2" rel="modal:open">
                             <picture>
-                              <source srcset="" media="(max-width: 580px)">
-                              <source srcset="" media="(max-width: 960px)">
-                              <source srcset="" media="(max-width: 1360px)">
+                              <source srcset="img/gallery/320/slide1-320.jpg" media="(max-width: 576px)">
+                              <source srcset="img/gallery/768/slide1-768.jpg" media="(max-width: 1000px)">
+                              <source srcset="img/gallery/1024/slide1-1024.jpg" media="(max-width: 1460px)">
+                              
                               
                               <!-- Здесь картинка от 1361 до 1920 и выше -->
-                              <img class="test-image" src="img/gallery/slide1.jpg" alt="">
+                              <img class="slide-gallery__img" src="img/gallery/slide1.jpg" alt="">
                             </picture>
                           </a>
-                          <a class="swiper-slide test-slide" href="#">
+                          <a class="swiper-slide slide-gallery"  href="#ex1" rel="modal:open" data-path="eight" data-animayion="fadeInUp" data-speed="700" href="#">
                             <picture>
-                              <source srcset="" media="(min-width: 1024px)">
-                              <img class="test-image" src="img/gallery/slide2.jpg" alt="">
+                              <source srcset="img/gallery/320/slide2-320.jpg" media="(max-width: 576px)">
+                              <source srcset="img/gallery/768/slide2-768.jpg" media="(max-width: 1000px)">
+                              <source srcset="img/gallery/1024/slide2-1024.jpg" media="(max-width: 1460px)">
+
+                              <img class="slide-gallery__img" src="img/gallery/slide2.jpg" alt="">
                             </picture>
                           </a>
-                          <a class="swiper-slide test-slide" href="#">
+                          <a class="swiper-slide slide-gallery" href="#">
                             <picture>
-                              <source srcset="" media="(min-width: 1024px)">
-                              <img class="test-image" src="img/gallery/slide3.jpg" alt="">
+                              <source srcset="img/gallery/320/slide3-320.jpg" media="(max-width: 576px)">
+                              <source srcset="img/gallery/768/slide3-768.jpg" media="(max-width: 1000px)">
+                              <source srcset="img/gallery/1024/slide3-1024.jpg" media="(max-width: 1460px)">
+
+                              <img class="slide-gallery__img" src="img/gallery/slide3.jpg" alt="">
                             </picture>
                           </a>
-                          <a class="swiper-slide test-slide" href="#">
+                          <a class="swiper-slide slide-gallery" href="#">
                             <picture>
-                              <source srcset="" media="(min-width: 1024px)">
-                              <img class="test-image" src="img/gallery/slide4.jpg" alt="">
+                              <source srcset="img/gallery/320/slide4-320.jpg" media="(max-width: 576px)">
+                              <source srcset="img/gallery/768/slide4-768.jpg" media="(max-width: 1000px)">
+                              <source srcset="img/gallery/1024/slide4-1024.jpg" media="(max-width: 1460px)">
+
+                              <img class="slide-gallery__img" src="img/gallery/slide4.jpg" alt="">
                             </picture>
                           </a>
-                          <a class="swiper-slide test-slide" href="#">
+                          <a class="swiper-slide slide-gallery" href="#">
                             <picture>
-                              <source srcset="" media="(min-width: 1024px)">
-                              <img class="test-image" src="img/gallery/slide5.jpg" alt="">
+                              <source srcset="img/gallery/320/slide5-320.jpg" media="(max-width: 576px)">
+                              <source srcset="img/gallery/768/slide5-768.jpg" media="(max-width: 1000px)">
+                              <source srcset="img/gallery/1024/slide5-1024.jpg" media="(max-width: 1460px)">
+
+                              <img class="slide-gallery__img" src="img/gallery/slide5.jpg" alt="">
                             </picture>
                           </a>
-                          <a class="swiper-slide test-slide" href="#">
+                          <a class="swiper-slide slide-gallery" href="#">
                             <picture>
-                              <source srcset="" media="(min-width: 1024px)">
-                              <img class="test-image" src="img/gallery/slide6.jpg" alt="">
+                              <source srcset="img/gallery/320/slide2-320.jpg" media="(max-width: 576px)">
+                              <source srcset="img/gallery/768/slide6-768.jpg" media="(max-width: 1000px)">
+                              <source srcset="img/gallery/1024/slide6-1024.jpg" media="(max-width: 1460px)">
+
+                              <img class="slide-gallery__img" src="img/gallery/slide6.jpg" alt="">
                             </picture>
                           </a>
                         </div>
                     </div>
                 </div>
+                <!-- <div class="section-gallery__modal"> -->
+                <div id="ex1" class="modal">
+                  <div class="section-gallery__modal-container" data-target="eight">
+                    <div class="modal-container__content">
+                      <h3 class="modal-container__painter">Казимир Малевич</h3>
+                      <h4 class="modal-container__painting-name">“Женщина с граблями”</h4>
+                      <span class="modal-container__date">1931-1932</span>
+                      <p class="modal-container__painting-desc">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.</p>
+                    </div>
+                    <img src="img/modal2.jpg" alt="" class="modal-container__img">
+                    <a href="#" rel="modal:close" class="modal-container__btn-close" tabindex="0">
+                      <svg class="modal-container__close-img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666695 -0.000125032L15.3334 15.3041L14.6667 15.9998L2.70967e-05 0.695522L0.666695 -0.000125032Z" fill="black"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
             </div>
         </section>
 
-        <section class="section-catalog">
+        <section class="section-catalog" id="catalog">
             <div class="container section-catalog__container">
                 <h3 class="main-heading">Каталог</h3>
                 <p class="section-catalog__desc">Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы. </p>
@@ -356,13 +403,13 @@
                         <img src="/img/catalog/dominiko.jpg" alt="" class="section-catalog__img">
                         <h4 class="section-catalog__name">Доменико Гирландайо</h4>
                         <span class="section-catalog__date">2 июня 1448–11 января 1494</span>
-                        <p class="section-catalog__desc">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).</p>
+                        <p class="section-catalog__desc section-catalog__desc-text">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).</p>
                       </div>
 
                       <div class="section-catalog__info" data-target="seven">
                         <img src="/img/catalog/painter.svg" alt="" class="section-catalog__img">
                         <h4 class="section-catalog__name">Что мы о нём знаем?</h4>
-                        <p class="section-catalog__desc">Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
+                        <p class="section-catalog__desc section-catalog__desc-text desc-text">Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
                         <a href="#gallery" class="accordion__wrap-link js-scroll-link"><span>В галерею</span></a>
                       </div>
                     </div>
@@ -689,7 +736,7 @@
             </div>
         </section>
 
-        <section class="section-events">
+        <section class="section-events" id="events">
           <div class="container section-events__container">
             <h3 class="main-heading">События</h3>
 
@@ -700,7 +747,7 @@
                   <div class="slide-content">
                     <div class="slide-content__text">
                       <div class="slide-img__desc">Музей им.Щусева <br> с 20 марта по 30 апреля</div>
-                      <h4 class="slide-heading">Книжная гравюра в восприятии</h4>
+                      <h4 class="slide-heading">Книжная гравюра в&nbsp;живом в восприятии</h4>
                       <p class="slide-desc">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо</p>
                     </div>
                     <button class="slide-content__btn" tabindex="0">Подробнее</button>
@@ -712,7 +759,7 @@
                   <div class="slide-content">
                     <div class="slide-content__text">
                       <div class="slide-img__desc">ММОМА <br> 24 марта 19:00</div>
-                      <h4 class="slide-heading">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h4>
+                      <h4 class="slide-heading">«Открытая дискуссия». Дмитрий&nbsp;Петров и Сергей Ильин.</h4>
                       <p class="slide-desc">Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта</p>
                     </div>
                     <button class="slide-content__btn" tabindex="0">Подробнее</button>
@@ -724,7 +771,7 @@
                     <div class="slide-content">
                       <div class="slide-content__text">
                         <div class="slide-img__desc">Еврейский музей <br> с 31 марта по 21 апреля</div>
-                        <h4 class="slide-heading">Выставка «Формация 2020»</h4>
+                        <h4 class="slide-heading">Выставка «Формация&nbsp;2020»</h4>
                         <p class="slide-desc">Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных рассуждений</p>
                       </div>
                       <button class="slide-content__btn" tabindex="0">Подробнее</button>
@@ -757,14 +804,16 @@
               </div>
             </div>
 
-            <div class="swiper-pagination swiper-events-pag">
+            <div class="swiper-navigation swiper-events-nav">
               <button class="swiper-events__btn events-btn-prev" tabindex="0"></button>
               <button class="swiper-events__btn events-btn-next" tabindex="0"></button>
             </div>
+
+            <div class="swiper-pagination swiper-pagination__events"></div>
           </div>
         </section>
 
-        <section class="section-project">
+        <section class="section-project" id="projects">
           <div class="container section-project__container">
             <h3 class="main-heading">Проекты</h3>
             <p class="section-project__text">Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не уникальными данными до степени совершённой неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде всего, постоянное информационно-пропагандистское 
@@ -830,7 +879,7 @@
           </div>
         </section>
 
-        <section class="section-contacts">
+        <section class="section-contacts" id="contacts">
           <div class="container section-contacts__container">
             <div class="section-contacts__top">
               <div class="section-contacts__info">
@@ -858,8 +907,8 @@
                   data-validate-rules="phone">
                 </label>
 
-                <label class="section-contacts__label">
-                  <button class="section-contacts__btn">Заказать обратный звонок</button>
+                <label class="section-contacts__label section-contacts__label-btn">
+                  <button class="section-contacts__btn">Заказать <span>обратный звонок</span></button>
                 </label>
               </form>
 
@@ -887,7 +936,7 @@
             </div>
           </div>
           <div class="section-contacts__bottom">
-            <div id="myMap1" style="width: 1920px; height: 700px" class="section-contacts__map"></div>
+            <div id="myMap1" class="section-contacts__map"></div>
           </div>
         </section>
     </main>

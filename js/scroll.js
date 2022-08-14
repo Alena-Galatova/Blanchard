@@ -1,4 +1,4 @@
-document.querySelectorAll('.js-scroll-link').forEach(link => {
+document.querySelectorAll('.js-scroll-link, .header-container__nav-link').forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
 

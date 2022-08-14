@@ -5,23 +5,62 @@ document.addEventListener("DOMContentLoaded", () => {
         rows: 1,
         fill: "row"
       },
-      spaceBetween: 20,
+
+      spaceBetween: 50,
       pagination: {
-        el: ".test-section .test-pagination",
-        type: "fraction"
+        el: '.swiper-pagination__events',
+        type: "bullets",
+        // dynamicBullets: true,img
+        // dynamicMainBullets: 3
       },
+
       navigation: {
         nextEl: ".events-btn-next",
         prevEl: ".events-btn-prev"
       },
   
       breakpoints: {
-        441: {
+        320: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+          spaceBetween: 20
+        },
+
+        576: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+          spaceBetween: 20
+        },
+
+        768: {
           slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 20
+        },
+
+        1000: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
           spaceBetween: 30
         },
   
         1200: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+          spaceBetween: 30
+        },
+
+        1400: {
+          slidesPerView: 3,
+          spaceBetween: 30
+        },
+
+        1600: {
+          slidesPerView: 3,
+          spaceBetween: 50
+        },
+
+        1920: {
           slidesPerView: 3,
           spaceBetween: 50
         }

@@ -7,24 +7,70 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       spaceBetween: 20,
       pagination: {
-        el: ".test-swiper .test-pagination",
+        el: ".swiper-gallery .gallery-pagination",
         type: "fraction"
       },
       navigation: {
-        nextEl: ".test-next",
-        prevEl: ".test-prev"
+        nextEl: ".gallery-next",
+        prevEl: ".gallery-prev"
       },
   
       breakpoints: {
-        441: {
+
+        440: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+          spaceBetween: 30
+        },
+
+        500: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+          spaceBetween: 30
+        },
+
+        576: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+          spaceBetween: 30
+        },
+
+        577: {
           slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 30
+        },
+
+        768: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 30
+        },
+
+        1000: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
           spaceBetween: 30
         },
   
         1200: {
           slidesPerView: 3,
-          spaceBetween: 50
-        }
+          slidesPerGroup: 3,
+          spaceBetween: 30
+        },
+
+        1400: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+          spaceBetween: 30
+        },
+
+        1920: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+          spaceBetween: 30
+        },
+
       },
   
       a11y: false,
