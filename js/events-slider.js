@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       spaceBetween: 50,
       pagination: {
-        el: '.swiper-pagination__events',
+        el: '.swiper-events-pagination',
         type: "bullets",
         // dynamicBullets: true,img
         // dynamicMainBullets: 3
