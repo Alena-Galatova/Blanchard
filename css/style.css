@@ -456,83 +456,83 @@ input {
 }
 
 .header-container__item-link--tintoretto {
-  background-image: url('/img/dropdown/tintoretto.jpg');
+  background-image: url('../img/dropdown/tintoretto.jpg');
 }
 
 .header-container__item-link--fridrih {
-  background-image: url('/img/dropdown/fridrih.jpg');
+  background-image: url('../img/dropdown/fridrih.jpg');
 }
 
 .header-container__item-link--leonardo {
-  background-image: url('/img/dropdown/leonardo.jpg');
+  background-image: url('../img/dropdown/leonardo.jpg');
 }
 
 .header-container__item-link--verrokio {
-  background-image: url('/img/dropdown/verrokio.jpg');
+  background-image: url('../img/dropdown/verrokio.jpg');
 }
 
 .header-container__item-link--mone {
-  background-image: url('/img/dropdown/mone.jpg');
+  background-image: url('../img/dropdown/mone.jpg');
 }
 
 .header-container__item-link--sislay {
-  background-image: url('/img/dropdown/sislay.jpg');
+  background-image: url('../img/dropdown/sislay.jpg');
 }
 
 .header-container__item-link--mane {
-  background-image: url('/img/dropdown/mane.jpg');
+  background-image: url('../img/dropdown/mane.jpg');
 }
 
 .header-container__item-link--renuar {
-  background-image: url('/img/dropdown/renuar.jpg');
+  background-image: url('../img/dropdown/renuar.jpg');
 }
 
 .header-container__item-link--vangog {
-  background-image: url('/img/dropdown/vangog.jpg');
+  background-image: url('../img/dropdown/vangog.jpg');
 }
 
 .header-container__item-link--sezann {
-  background-image: url('/img/dropdown/sezann.jpg');
+  background-image: url('../img/dropdown/sezann.jpg');
 }
 
 .header-container__item-link--gogen {
-  background-image: url('/img/dropdown/gogen.jpg');
+  background-image: url('../img/dropdown/gogen.jpg');
 }
 
 .header-container__item-link--sera {
-  background-image: url('/img/dropdown/sera.jpg');
+  background-image: url('../img/dropdown/sera.jpg');
 }
 
 .header-container__item-link--kandinskiy {
-  background-image: url('/img/dropdown/kandinskiy.jpg');
+  background-image: url('../img/dropdown/kandinskiy.jpg');
 }
 
 .header-container__item-link--marinetti {
-  background-image: url('/img/dropdown/marinetti.jpg');
+  background-image: url('../img/dropdown/marinetti.jpg');
 }
 
 .header-container__item-link--malevich {
-  background-image: url('/img/dropdown/malevich.jpg');
+  background-image: url('../img/dropdown/malevich.jpg');
 }
 
 .header-container__item-link--picasso {
-  background-image: url('/img/dropdown/picasso.jpg');
+  background-image: url('../img/dropdown/picasso.jpg');
 }
 
 .header-container__item-link--karra {
-  background-image: url('/img/dropdown/karra.jpg');
+  background-image: url('../img/dropdown/karra.jpg');
 }
 
 .header-container__item-link--pratella {
-  background-image: url('/img/dropdown/pratella.jpg');
+  background-image: url('../img/dropdown/pratella.jpg');
 }
 
 .header-container__item-link--severiny {
-  background-image: url('/img/dropdown/severiny.jpg');
+  background-image: url('../img/dropdown/severiny.jpg');
 }
 
 .header-container__item-link--balla {
-  background-image: url('/img/dropdown/balla.jpg');
+  background-image: url('../img/dropdown/balla.jpg');
 }
 
 .header-container__item-text {
@@ -787,13 +787,13 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 }
 
 .slide-1 {
-  background-image: url("/img/mainSlide1.jpg");
+  background-image: url("../img/mainSlide1.jpg");
 }
 .slide-2 {
-  background-image: url("/img/mainSlide2.jpg");
+  background-image: url("../img/mainSlide2.jpg");
 }
 .slide-3 {
-  background-image: url("/img/mainSlide3.jpg");
+  background-image: url("../img/mainSlide3.jpg");
 }
 
 .swiper-pagination-bullets .swiper-pagination-bullet {
@@ -837,7 +837,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
   padding: 80px 0;
   max-width: 1920px;
   min-height: 595px;
-  background-image: url(/img/gallery.jpg);
+  background-image: url(../img/gallery.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1203,7 +1203,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
   box-sizing: border-box;
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  background-image: url(/img/gallery/lup.svg);
+  background-image: url(../img/gallery/lup.svg);
   background-repeat: no-repeat;
   background-size: 100px;
   background-position: center;
@@ -2587,13 +2587,13 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
   }
 
   .slide-1 {
-    background-image: url("/img/main-slider/slide1-1024.jpg");
+    background-image: url("../img/main-slider/slide1-1024.jpg");
   }
   .slide-2 {
-    background-image: url("/img/main-slider/slide2-1024.jpg");
+    background-image: url("../img/main-slider/slide2-1024.jpg");
   }
   .slide-3 {
-    background-image: url("/img/main-slider/slide3-1024.jpg");
+    background-image: url("../img/main-slider/slide3-1024.jpg");
   }
 
   .section-about__desc {
@@ -2806,7 +2806,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     height: 29px;
     position: fixed;
     z-index: 100;
-    background: url(/img/X.svg);
+    background: url(../img/X.svg);
     background-repeat: no-repeat;
   }
 
@@ -2854,7 +2854,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     width: 23px;
     height: 23px;
     z-index: 1000;
-    background: url(/img/X.svg);
+    background: url(../img/X.svg);
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -2963,13 +2963,13 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     height: 768px;
   }
   .slide-1 {
-    background-image: url("/img/main-slider/slide1-768.jpg");
+    background-image: url("../img/main-slider/slide1-768.jpg");
   }
   .slide-2 {
-    background-image: url("/img/main-slider/slide2-768.jpg");
+    background-image: url("../img/main-slider/slide2-768.jpg");
   }
   .slide-3 {
-    background-image: url("/img/main-slider/slide3-768.jpg");
+    background-image: url("../img/main-slider/slide3-768.jpg");
   }
 
   .header-container__bottom {
@@ -3401,13 +3401,13 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
   }
 
   .slide-1 {
-    background-image: url("/img/main-slider/slide1-320.jpg");
+    background-image: url("../img/main-slider/slide1-320.jpg");
   }
   .slide-2 {
-    background-image: url("/img/main-slider/slide2-320.jpg");
+    background-image: url("../img/main-slider/slide2-320.jpg");
   }
   .slide-3 {
-    background-image: url("/img/main-slider/slide3-320.jpg");
+    background-image: url("../img/main-slider/slide3-320.jpg");
   }
 
   .section-hero {
