@@ -2301,6 +2301,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 
 .section-contacts__name {
   display: block;
+  margin: 0;
   padding-bottom: 10px;
   font-size: 24px;
   font-weight: 600;
